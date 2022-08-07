@@ -1,6 +1,9 @@
-const withFonts = require('next-fonts');
-module.exports = withFonts({
-  webpack(config, options) {
-    return config;
-  }
+const withPWA = require("next-pwa");
+
+module.exports = withPWA({
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+  },
 });

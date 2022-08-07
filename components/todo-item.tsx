@@ -47,13 +47,13 @@ const SingleTodo: React.FC<{
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
-                    className={`bg-[#ec1291] shadow-xl flex rounded-md py-10 px-3 justify-between mt-8 transation  ${snapshot.isDragging ? "shadow-xl" : ""}`}
+                    className={`bg-[#ec1291] shadow-xl flex w-full rounded-md py-10 px-3 justify-between mt-8 transation  ${snapshot.isDragging ? "shadow-xl" : ""}`}
                 >
                     {edit ? (
                         <input
                             value={editTodo}
                             onChange={(e) => setEditTodo(e.target.value)}
-                            className="todos__single--text"
+                            className="flex-1 p-[5px] border-none outline-none"
                             ref={inputRef}
                         />
                     ) : todo.isDone ? (
@@ -67,6 +67,8 @@ const SingleTodo: React.FC<{
                             onClick={() => {
                                 if (!edit && !todo.isDone) {
                                     setEdit(!edit);
+                                } else if (edit) {
+                                    setEdit(false)
                                 }
                             }}
                         >

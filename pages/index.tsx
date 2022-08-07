@@ -5,7 +5,7 @@ import TodoList from '../components/todo-list'
 import AddNewTodo from '../components/add-new-todo'
 import { useState } from 'react'
 import { Todo } from '../models/models';
-import '../public/B_Yekan/Yekan.ttf';
+// import '../public/B_Yekan/Yekan.ttf';
 import { GoCalendar } from 'react-icons/go'
 
 

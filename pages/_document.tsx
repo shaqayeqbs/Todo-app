@@ -5,8 +5,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>  
-          <link rel="preconnect" href="'/public//B_Yekan/Yekan.ttf"/> 
-        </Head>
+          <link rel="preconnect" href="/B_Yekan/Yekan.ttf"/> 
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="apple-touch-icon" href="/icon.png"></link>
+        </Head>    
         <body>
           <div id="overlays"></div>
           <Main />
